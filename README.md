@@ -1,28 +1,21 @@
-  Minecraft Builder & Prototype
-  
-Project Description
-This project demonstrates the Builder and Prototype design patterns using a Minecraft-like world.
-Builder creates a world with biomes and structures.
-Prototype clones objects (blocks, mobs).
+Assignment 2: Prototype Pattern
+This project demonstrates the Prototype design pattern. It is used for cloning game objects, such as blocks and mobs, without full recreation.
 
-  Project Files
-IWorldBuilder.java – Interface for the world builder
-SimpleWorldBuilder.java – Implementation of the builder
-World.java – World class
-MUDBuilderDemo.java – Demonstration of the Builder pattern
-CloneableGameEntity.java – Interface for cloning entities
-Block.java – Class representing blocks
-Entity.java – Class representing mobs
+The code creates original objects, clones them, and displays the result in the console.
+
+Project Files:
+CloneableGameEntity.java – Interface for cloning
+Block.java – Class for blocks (e.g., "Stone"), supports cloning
+Entity.java – Class for mobs (e.g., "Cow"), supports cloning
 MUDPrototypeDemo.java – Demonstration of the Prototype pattern
-MUDCombinedDemo.java – Combination of Builder and Prototype patterns
+Console Output Example:
 
-  Program Execution
-Creates a world using the Builder pattern.
-Displays world information (biomes, structures).
-Clones objects (blocks and mobs) using the Prototype pattern.
-Outputs cloned objects to the console.
+Originals:  
+Block: Stone  
+Entity: Cow (HP: 10)  
 
-  Expected Console Output
-The program creates a world named "Cubic World" with biomes Forest and Desert, as well as structures Village and Castle.
-The Prototype pattern clones the object "Stone", resulting in a cloned Stone block.
-The Prototype pattern clones a mob "Cow" (HP: 10), and a cloned cow with the same attributes appears.
+Clones:  
+Block: Stone  
+Entity: Cow (HP: 10)  
+
+The program creates objects, calls .cloneEntity(), and generates independent copies. This speeds up object creation and optimizes resource usage.
